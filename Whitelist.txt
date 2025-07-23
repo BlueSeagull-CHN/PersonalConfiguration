@@ -1,8 +1,5 @@
 @@||zh.hplives.com^
 
-@@||google.com/pagead/
-@@||static.doubleclick.net^$domain=youtube.com
-@@||youtube.com/get_midroll_
 @@||topnewsfeeds.net^
 @@||nbryb.com^
 @@||superbdolly.com^
