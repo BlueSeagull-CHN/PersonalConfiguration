@@ -11,7 +11,7 @@ https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/hea
 ![Static Badge](https://img.shields.io/badge/MoonTV-blue?logo=moonrepo&logoColor=%23008FC7&labelColor=black)
 MoonTV/config.json 是MoonTV订阅配置文件，后台添加订阅即可。
 ```python
-https://github.com/BlueSeagull-CHN/PersonalConfiguration/raw/refs/heads/main/MoonTV/config.json
+https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json
 ```
 ---
 ### Github代理
