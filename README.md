@@ -14,6 +14,13 @@ MoonTV/config.json 是MoonTV订阅配置文件，后台添加订阅即可。
 https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json
 ```
 ---
+### IPTV-m3u
+![Static Badge](https://img.shields.io/badge/IPTV-blue?logo=appletv&logoColor=%23000000&labelColor=white)
+IPTV-M3U订阅地址，每天更新。
+```python
+https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u
+```
+---
 ### Github代理
 国内使用可以在地址前面加上下面的地址：
 ```python
