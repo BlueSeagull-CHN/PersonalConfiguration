@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/out
 ```
 ---
 ### Github代理
-国内使用可以在地址前面加上下面的地址：
+国内使用可以在前面加上下面的地址：
 ```python
 https://github.860411.xyz/
 ```
