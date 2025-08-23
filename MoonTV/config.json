@@ -36,11 +36,6 @@
             "api": "https://ikunzyapi.com/api.php/provide/vod",
             "detail": "https://ikunzyapi.com"
         },
-        "api_8": {
-            "name": "TV-wujinapi无尽",
-            "api": "https://api.wujinapi.cc/api.php/provide/vod",
-            "detail": ""
-        },
         "api_9": {
             "name": "TV-丫丫点播",
             "api": "https://cj.yayazy.net/api.php/provide/vod",
@@ -56,11 +51,6 @@
             "api": "https://collect.wolongzyw.com/api.php/provide/vod",
             "detail": "https://collect.wolongzyw.com"
         },
-        "api_12": {
-            "name": "TV-卧龙资源",
-            "api": "https://collect.wolongzy.cc/api.php/provide/vod",
-            "detail": ""
-        },
         "api_13": {
             "name": "TV-卧龙资源",
             "api": "https://wolongzyw.com/api.php/provide/vod",
@@ -70,11 +60,6 @@
             "name": "TV-天涯资源",
             "api": "https://tyyszy.com/api.php/provide/vod",
             "detail": "https://tyyszy.com"
-        },
-        "api_15": {
-            "name": "TV-如意资源",
-            "api": "https://cj.rycjapi.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_16": {
             "name": "TV-小猫咪资源",
@@ -86,21 +71,6 @@
             "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod",
             "detail": "https://api.xinlangapi.com"
         },
-        "api_18": {
-            "name": "TV-无尽资源",
-            "api": "https://api.wujinapi.com/api.php/provide/vod",
-            "detail": ""
-        },
-        "api_19": {
-            "name": "TV-无尽资源",
-            "api": "https://api.wujinapi.me/api.php/provide/vod",
-            "detail": ""
-        },
-        "api_20": {
-            "name": "TV-无尽资源",
-            "api": "https://api.wujinapi.net/api.php/provide/vod",
-            "detail": ""
-        },
         "api_21": {
             "name": "TV-旺旺短剧",
             "api": "https://wwzy.tv/api.php/provide/vod",
@@ -110,11 +80,6 @@
             "name": "TV-旺旺资源",
             "api": "https://api.wwzy.tv/api.php/provide/vod",
             "detail": "https://api.wwzy.tv"
-        },
-        "api_23": {
-            "name": "TV-暴风资源",
-            "api": "https://bfzyapi.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_24": {
             "name": "TV-最大点播",
@@ -126,25 +91,10 @@
             "api": "https://api.zuidapi.com/api.php/provide/vod",
             "detail": "https://api.zuidapi.com"
         },
-        "api_26": {
-            "name": "TV-樱花资源",
-            "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
-            "detail": ""
-        },
-        "api_27": {
-            "name": "TV-步步高资源",
-            "api": "https://api.yparse.com/api/json",
-            "detail": ""
-        },
         "api_28": {
             "name": "TV-牛牛点播",
             "api": "https://api.niuniuzy.me/api.php/provide/vod",
             "detail": "https://api.niuniuzy.me"
-        },
-        "api_29": {
-            "name": "TV-电影天堂资源",
-            "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
-            "detail": "http://caiji.dyttzyapi.com"
         },
         "api_30": {
             "name": "AV-百万资源",
@@ -155,16 +105,6 @@
             "name": "TV-百度云资源",
             "api": "https://api.apibdzy.com/api.php/provide/vod",
             "detail": "https://api.apibdzy.com"
-        },
-        "api_32": {
-            "name": "TV-神马云",
-            "api": "https://api.1080zyku.com/inc/apijson.php/",
-            "detail": "https://api.1080zyku.com"
-        },
-        "api_33": {
-            "name": "TV-索尼资源",
-            "api": "https://suoniapi.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_34": {
             "name": "TV-红牛资源",
@@ -195,16 +135,6 @@
             "name": "TV-豪华资源",
             "api": "https://hhzyapi.com/api.php/provide/vod",
             "detail": "https://hhzyapi.com"
-        },
-        "api_40": {
-            "name": "TV-速博资源",
-            "api": "https://subocaiji.com/api.php/provide/vod",
-            "detail": ""
-        },
-        "api_41": {
-            "name": "TV-量子资源",
-            "api": "https://cj.lziapi.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_42": {
             "name": "TV-金鹰点播",
@@ -261,11 +191,6 @@
             "api": "https://91md.me/api.php/provide/vod",
             "detail": "https://91md.me"
         },
-        "api_53": {
-            "name": "AV-AIvin",
-            "api": "http://lbapiby.com/api.php/provide/vod",
-            "detail": ""
-        },
         "api_54": {
             "name": "AV-JKUN资源",
             "api": "https://jkunzyapi.com/api.php/provide/vod",
@@ -275,11 +200,6 @@
             "name": "AV-souav资源",
             "api": "https://api.souavzy.vip/api.php/provide/vod",
             "detail": "https://api.souavzy.vip"
-        },
-        "api_56": {
-            "name": "AV-乐播资源",
-            "api": "https://lbapi9.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_57": {
             "name": "AV-奥斯卡资源",
@@ -305,11 +225,6 @@
             "name": "AV-玉兔资源",
             "api": "https://apiyutu.com/api.php/provide/vod",
             "detail": "https://apiyutu.com"
-        },
-        "api_62": {
-            "name": "AV-番号资源",
-            "api": "http://fhapi9.com/api.php/provide/vod",
-            "detail": ""
         },
         "api_63": {
             "name": "AV-白嫖资源",
@@ -478,6 +393,151 @@
         "fantuanyingshi": {
             "api": "https://www.fantuan.tv/api.php/provide/vod/",
             "name": "饭团影视"
+        },
+        "ougeduocang": {
+            "name": "TV-欧歌多仓",
+            "api": "http://tv.nxog.top",
+            "detail": ""
+        },
+        "ougebeiyong1": {
+            "name": "TV-欧歌备用1",
+            "api": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌",
+            "detail": ""
+        },
+        "ougebeiyong2": {
+            "name": "TV-欧歌备用2",
+            "api": "http://m.nxog.top/nxog/ou1.php?url=http://tv.nxog.top&b=欧歌",
+            "detail": ""
+        },
+        "ouge_fpt": {
+            "name": "TV-欧歌fpt",
+            "api": "http://vip.nxog.top/",
+            "detail": ""
+        },
+        "ouge_baipiao": {
+            "name": "TV-欧歌 白嫖小蚂蚁",
+            "api": "http://tv.nxog.top/api.php?mz=xb&id=1&b=白嫖小蚂蚁",
+            "detail": ""
+        },
+        "duhe": {
+            "name": "TV-毒盒多线路",
+            "api": "https://tv.youdu.fan:666",
+            "detail": ""
+        },
+        "duhe_beiyong": {
+            "name": "TV-毒盒备用",
+            "api": "https://youdu.fan/DC.txt",
+            "detail": ""
+        },
+        "hengxing": {
+            "name": "TV-恒星育华学堂多仓",
+            "api": "http://恒星.net/ZC.json",
+            "detail": ""
+        },
+        "quanwang": {
+            "name": "TV-全网影视多仓",
+            "api": "http://ww.weidonglong.com/ysc50311.json",
+            "detail": ""
+        },
+        "tianwei": {
+            "name": "TV-天微科技多线路",
+            "api": "http://tvkj.top/DC.txt",
+            "detail": ""
+        },
+        "xiaohezi": {
+            "name": "TV-小盒子多线路",
+            "api": "http://xhztv.top/tvbox.txt",
+            "detail": ""
+        },
+        "xiaohezi_beiyong1": {
+            "name": "TV-小盒子备用",
+            "api": "http://xhztv.top/DC.txt",
+            "detail": ""
+        },
+        "xiaohezi_beiyong2": {
+            "name": "TV-小盒子备用",
+            "api": "http://xhztv.top/dc",
+            "detail": ""
+        },
+        "moyu": {
+            "name": "TV-摸鱼多线路",
+            "api": "http://小鱼干.摸鱼儿.top",
+            "detail": ""
+        },
+        "xixia": {
+            "name": "TV-西夏影视多线路",
+            "api": "https://d.kstore.space/download/2912/xx888.json",
+            "detail": ""
+        },
+        "wuxie": {
+            "name": "TV-无邪优选仓多仓",
+            "api": "https://www.gitlink.org.cn/api/wxrj/wx/raw/wx.json?ref=master",
+            "detail": ""
+        },
+        "baohe": {
+            "name": "TV-宝盒视界多线路",
+            "api": "https://gh.con.sh/https://raw.githubusercontent.com/guot55/yg/main/dc2.json",
+            "detail": ""
+        },
+        "qixing": {
+            "name": "TV-七星仓多线路",
+            "api": "https://qixing.myhkw.com/DC.txt",
+            "detail": ""
+        },
+        "tinghao": {
+            "name": "TV-挺好分享多线路",
+            "api": "http://ztha.top/TVBox/FLCK.json",
+            "detail": ""
+        },
+        "keshicangku": {
+            "name": "TV-可视仓库多仓",
+            "api": "http://itvbox.cc/可视仓库",
+            "detail": ""
+        },
+        "feige": {
+            "name": "TV-飞哥传奇线路多线路",
+            "api": "https://chuanshuo.77blog.cn/dc.json",
+            "detail": ""
+        },
+        "yeyu": {
+            "name": "TV-业余打发多线路",
+            "api": "https://ghproxy.net/https://raw.githubusercontent.com/yyfxz/qqtv/main/qq.json",
+            "detail": ""
+        },
+        "youtube_api": {
+            "name": "TV-YouTube VOD API",
+            "api": "https://developers.google.com/youtube/v3",
+            "detail": "https://developers.google.com/youtube/v3"
+        },
+        "dailymotion_api": {
+            "name": "TV-Dailymotion API",
+            "api": "https://developer.dailymotion.com/api",
+            "detail": "https://developer.dailymotion.com/api"
+        },
+        "vimeo_api": {
+            "name": "TV-Vimeo API",
+            "api": "https://developer.vimeo.com/api/guides/start",
+            "detail": "https://developer.vimeo.com/api/guides/start"
+        },
+        "brightcove_api": {
+            "name": "TV-Brightcove API",
+            "api": "https://apis.support.brightcove.com/",
+            "detail": "https://apis.support.brightcove.com/"
+        },
+        "dacast_api": {
+            "name": "TV-DaCast Video API",
+            "api": "https://www.dacast.com/video-api/",
+            "detail": "https://www.dacast.com/video-api/"
+        },
+        "ibm_api": {
+            "name": "TV-IBM Cloud Video API",
+            "api": "https://developers.video.ibm.com",
+            "detail": "https://developers.video.ibm.com"
+        },
+        "twitch_api": {
+            "name": "TV-Twitch TV API",
+            "api": "https://dev.twitch.tv/",
+            "detail": "https://dev.twitch.tv/"
         }
     }
 }
