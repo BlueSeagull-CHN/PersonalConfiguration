@@ -516,11 +516,6 @@
             "name": "TV-Twitch TV API",
             "api": "https://dev.twitch.tv/",
             "detail": "https://dev.twitch.tv/"
-        },
-        "huangcang": {
-            "name": "AV-黄色仓库",
-            "api": "https://hsckzy.vip/api.php/provide/vod",
-            "detail": "https://hsckzy.vip"
         }
     }
 }
