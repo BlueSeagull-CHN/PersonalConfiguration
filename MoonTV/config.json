@@ -397,90 +397,112 @@
         "ougeduocang": {
             "name": "TV-欧歌多仓",
             "api": "http://tv.nxog.top",
+            "detail": ""
         },
         "ougebeiyong1": {
             "name": "TV-欧歌备用1",
             "api": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌",
+            "detail": ""
         },
         "ougebeiyong2": {
             "name": "TV-欧歌备用2",
             "api": "http://m.nxog.top/nxog/ou1.php?url=http://tv.nxog.top&b=欧歌",
+            "detail": ""
         },
         "ouge_fpt": {
             "name": "TV-欧歌fpt",
             "api": "http://vip.nxog.top/",
+            "detail": ""
         },
         "ouge_baipiao": {
             "name": "TV-欧歌 白嫖小蚂蚁",
             "api": "http://tv.nxog.top/api.php?mz=xb&id=1&b=白嫖小蚂蚁",
+            "detail": ""
         },
         "duhe": {
             "name": "TV-毒盒多线路",
             "api": "https://tv.youdu.fan:666",
+            "detail": ""
         },
         "duhe_beiyong": {
             "name": "TV-毒盒备用",
             "api": "https://youdu.fan/DC.txt",
+            "detail": ""
         },
         "hengxing": {
             "name": "TV-恒星育华学堂多仓",
             "api": "http://恒星.net/ZC.json",
+            "detail": ""
         },
         "quanwang": {
             "name": "TV-全网影视多仓",
             "api": "http://ww.weidonglong.com/ysc50311.json",
+            "detail": ""
         },
         "tianwei": {
             "name": "TV-天微科技多线路",
             "api": "http://tvkj.top/DC.txt",
+            "detail": ""
         },
         "xiaohezi": {
             "name": "TV-小盒子多线路",
             "api": "http://xhztv.top/tvbox.txt",
+            "detail": ""
         },
         "xiaohezi_beiyong1": {
             "name": "TV-小盒子备用",
             "api": "http://xhztv.top/DC.txt",
+            "detail": ""
         },
         "xiaohezi_beiyong2": {
             "name": "TV-小盒子备用",
             "api": "http://xhztv.top/dc",
+            "detail": ""
         },
         "moyu": {
             "name": "TV-摸鱼多线路",
             "api": "http://小鱼干.摸鱼儿.top",
+            "detail": ""
         },
         "xixia": {
             "name": "TV-西夏影视多线路",
             "api": "https://d.kstore.space/download/2912/xx888.json",
+            "detail": ""
         },
         "wuxie": {
             "name": "TV-无邪优选仓多仓",
             "api": "https://www.gitlink.org.cn/api/wxrj/wx/raw/wx.json?ref=master",
+            "detail": ""
         },
         "baohe": {
             "name": "TV-宝盒视界多线路",
             "api": "https://gh.con.sh/https://raw.githubusercontent.com/guot55/yg/main/dc2.json",
+            "detail": ""
         },
         "qixing": {
             "name": "TV-七星仓多线路",
             "api": "https://qixing.myhkw.com/DC.txt",
+            "detail": ""
         },
         "tinghao": {
             "name": "TV-挺好分享多线路",
             "api": "http://ztha.top/TVBox/FLCK.json",
+            "detail": ""
         },
         "keshicangku": {
             "name": "TV-可视仓库多仓",
             "api": "http://itvbox.cc/可视仓库",
+            "detail": ""
         },
         "feige": {
             "name": "TV-飞哥传奇线路多线路",
             "api": "https://chuanshuo.77blog.cn/dc.json",
+            "detail": ""
         },
         "yeyu": {
             "name": "TV-业余打发多线路",
             "api": "https://ghproxy.net/https://raw.githubusercontent.com/yyfxz/qqtv/main/qq.json",
+            "detail": ""
         },
         "youtube_api": {
             "name": "TV-YouTube VOD API",
