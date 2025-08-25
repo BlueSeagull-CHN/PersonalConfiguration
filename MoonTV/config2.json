@@ -544,5 +544,20 @@
             "api": "https://hsckzy.vip/api.php/provide/vod",
             "detail": "https://hsckzy.vip"
         }
+        "sobo": {
+            "name": "速播资源",
+            "api": "https://subocaiji.com/api.php/provide/vod",
+            "detail": "https://subocaiji.com"
+        }
+        "fczy": {
+            "name": "蜂巢资源",
+            "api": "https://api.fczy888.me/api.php/provide/vod",
+            "detail": "https://api.fczy888.me"
+        }
+        "ukzy": {
+            "name": "U酷资源",
+            "api": "https://api.ukuapi88.com/api.php/provide/vod",
+            "detail": "https://api.ukuapi88.com"
+        }
     }
 }
