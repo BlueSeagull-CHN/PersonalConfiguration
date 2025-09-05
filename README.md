@@ -58,10 +58,11 @@ https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/late
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js
 ```
 </details>
+
 ---
 ## Github代理
 
-![Static Badge](https://img.shields.io/badge/Broker-blue?logo=iobroker&logoColor=blue&labelColor=white)  
+![Static Badge](https://img.shields.io/badge/Github-blue?logo=github&logoColor=blue&labelColor=white)  
 国内使用可以在前面加上下面的地址：
 ```python
 https://github.860411.xyz/
