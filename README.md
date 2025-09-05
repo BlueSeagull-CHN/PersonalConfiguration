@@ -24,37 +24,49 @@ https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/out
 ## 洛雪音乐源
 ![Static Badge](https://img.shields.io/badge/洛雪-blue?logo=applemusic&logoColor=%236AA127&labelColor=white)  
 洛雪音乐源，内容源于网络。
+<details>
+  <summary>点击查看</summary>
+  
 ### SixYin
+  
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js
 ```
 ### Huibq
+
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js
 ```
 ### Flower
+
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js
 ```
 ### LX
+
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js
 ```
 ### ikun
+
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js
 ```
 ### Grass
+
 ```python
 https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js
 ```
+</details>
 ---
 ## Github代理
+
 ![Static Badge](https://img.shields.io/badge/Broker-blue?logo=iobroker&logoColor=blue&labelColor=white)  
 国内使用可以在前面加上下面的地址：
 ```python
 https://github.860411.xyz/
 ```
+
 例如：
 ```python
 https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt
