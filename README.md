@@ -4,11 +4,11 @@
 *精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。*
 
 ## 📋 目录
-- [AdGuardHome 规则](#adguardhome-规则)
-- [MoonTV 订阅](#moontv-订阅)
-- [IPTV M3U 订阅](#iptv-m3u-订阅)
-- [洛雪音乐源](#洛雪音乐源)
-- [GitHub 代理](#github-代理)
+- [AdGuardHome 规则](##adguardhome-规则)
+- [MoonTV 订阅](##moontv-订阅)
+- [IPTV M3U 订阅](##iptv-m3u-订阅)
+- [洛雪音乐源](##洛雪音乐源)
+- [GitHub 代理](##github-代理)
 
 ***
 
@@ -33,7 +33,7 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| 配置文件       | `https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true` | [点击复制] |
+| 配置文件       |  https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true  | [点击复制] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -48,7 +48,7 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| M3U 播放列表   | `https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u` | [点击复制] [每日更新] |
+| M3U 播放列表   |  https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u  | [点击复制] [每日更新] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
