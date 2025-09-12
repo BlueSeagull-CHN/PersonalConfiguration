@@ -1,6 +1,6 @@
-# 私人使用配置 ✨
+# ✨ 私人使用配置
 
-<img src="images/banner.webp?text=Personal+Configuration+Banner" alt="Personal Configuration Banner" width="100%">
+<img src="https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/main/images/banner.webp" alt="私人使用配置 Banner" width="100%">
 *精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。*
 
 ## 📋 目录
@@ -12,13 +12,13 @@
 
 ***
 
-## AdGuardHome 规则 🛡️
+## 🛡️ AdGuardHome 规则
 
 优化网络体验的 AdGuardHome 白名单规则。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| 白名单规则     | `https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt');alert('已复制到剪贴板！')">复制</button> |
+| 白名单规则     | `https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | [点击复制] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -27,13 +27,13 @@
 
 ***
 
-## MoonTV 订阅 📺
+## 📺 MoonTV 订阅
 
 MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| 配置文件       | `https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true` | <button onclick="navigator.clipboard.writeText('https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true');alert('已复制到剪贴板！')">复制</button> |
+| 配置文件       | `https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true` | [点击复制] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -42,13 +42,13 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 ***
 
-## IPTV M3U 订阅 📡
+## 📡 IPTV M3U 订阅
 
 每日更新的 IPTV M3U 播放列表，支持流媒体播放。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| M3U 播放列表   | `https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u');alert('已复制到剪贴板！')">复制</button> [每日更新] |
+| M3U 播放列表   | `https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u` | [点击复制] [每日更新] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -57,21 +57,21 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 ***
 
-## 洛雪音乐源 🎵
+## 🎵 洛雪音乐源
 
 网络收集的洛雪音乐源，丰富你的音乐体验。
 
 <details>
-  <summary><strong>展开音乐源 🔍</strong></summary>
+  <summary><strong>🔍 展开音乐源</strong></summary>
 
   | **音乐源**     | **链接**                                                                 | **操作** |
   |----------------|--------------------------------------------------------------------------|----------|
-  | SixYin        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js');alert('已复制到剪贴板！')">复制</button> |
-  | Huibq         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js');alert('已复制到剪贴板！')">复制</button> |
-  | Flower        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js');alert('已复制到剪贴板！')">复制</button> |
-  | LX            | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js');alert('已复制到剪贴板！')">复制</button> |
-  | ikun          | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js');alert('已复制到剪贴板！')">复制</button> |
-  | Grass         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js` | <button onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js');alert('已复制到剪贴板！')">复制</button> |
+  | SixYin        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js` | [点击复制] |
+  | Huibq         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js` | [点击复制] |
+  | Flower        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js` | [点击复制] |
+  | LX            | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js` | [点击复制] |
+  | ikun          | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js` | [点击复制] |
+  | Grass         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js` | [点击复制] |
 
   <details>
     <summary><strong>使用说明</strong></summary>
@@ -81,14 +81,14 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 ***
 
-## GitHub 代理 🌐
+## 🌐 GitHub 代理
 
 为访问受限地区提供的 GitHub raw 链接代理。
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| 代理地址       | `https://github.860411.xyz/`                                             | <button onclick="navigator.clipboard.writeText('https://github.860411.xyz/');alert('已复制到剪贴板！')">复制</button> |
-| 使用示例       | `https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | <button onclick="navigator.clipboard.writeText('https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt');alert('已复制到剪贴板！')">复制</button> |
+| 代理地址       | `https://github.860411.xyz/`                                             | [点击复制] |
+| 使用示例       | `https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | [点击复制] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
