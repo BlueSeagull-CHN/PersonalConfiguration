@@ -18,7 +18,7 @@
 
 | **资源**       | **链接**                                                                 | **操作** |
 |----------------|--------------------------------------------------------------------------|----------|
-| 白名单规则     | `https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | [点击复制] |
+| 白名单规则     |  https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt  | [点击复制] |
 
 <details>
   <summary><strong>使用说明</strong></summary>
