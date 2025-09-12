@@ -1,0 +1,195 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私人使用配置</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    h1::before, h2::before { margin-right: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    button { background-color: #007bff; color: white; border: none; border-radius: 4px; padding: 5px 10px; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    details { margin-bottom: 20px; }
+    summary { cursor: pointer; font-weight: bold; }
+    img { max-width: 100%; height: auto; }
+    .copy-btn { font-size: 14px; }
+    .status { color: #28a745; }
+  </style>
+</head>
+<body>
+  <h1>✨ 私人使用配置</h1>
+  <img src="https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/main/images/banner.webp" alt="私人使用配置 Banner" width="100%">
+  <p><em>精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。</em></p>
+
+  <h2>📋 目录</h2>
+  <ul>
+    <li><a href="#adguardhome-规则">AdGuardHome 规则</a></li>
+    <li><a href="#moontv-订阅">MoonTV 订阅</a></li>
+    <li><a href="#iptv-m3u-订阅">IPTV M3U 订阅</a></li>
+    <li><a href="#洛雪音乐源">洛雪音乐源</a></li>
+    <li><a href="#github-代理">GitHub 代理</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="adguardhome-规则">🛡️ AdGuardHome 规则</h2>
+  <p>优化网络体验的 AdGuardHome 白名单规则。</p>
+  <table>
+    <tr><th>资源</th><th>链接</th><th>操作</th></tr>
+    <tr>
+      <td>白名单规则</td>
+      <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt</code></td>
+      <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt');alert('已复制！')">复制</button></td>
+    </tr>
+  </table>
+  <details>
+    <summary><strong>使用说明</strong></summary>
+    <p>将白名单规则链接添加到 AdGuardHome 的过滤器设置中，可有效阻止广告并优化网络访问。确保定期检查更新以获取最新规则。</p>
+  </details>
+
+  <hr>
+
+  <h2 id="moontv-订阅">📺 MoonTV 订阅</h2>
+  <p>MoonTV 订阅配置文件，轻松启用流媒体服务。</p>
+  <table>
+    <tr><th>资源</th><th>链接</th><th>操作</th></tr>
+    <tr>
+      <td>配置文件</td>
+      <td><code>https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true</code></td>
+      <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true');alert('已复制！')">复制</button></td>
+    </tr>
+  </table>
+  <details>
+    <summary><strong>使用说明</strong></summary>
+    <p>在 MoonTV 后台的订阅管理中添加此配置文件链接，保存后即可启用订阅内容。建议检查链接有效性以确保正常使用。</p>
+  </details>
+
+  <hr>
+
+  <h2 id="iptv-m3u-订阅">📡 IPTV M3U 订阅</h2>
+  <p>每日更新的 IPTV M3U 播放列表，支持流媒体播放。</p>
+  <table>
+    <tr><th>资源</th><th>链接</th><th>操作</th></tr>
+    <tr>
+      <td>M3U 播放列表</td>
+      <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u</code></td>
+      <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u');alert('已复制！')">复制</button> <span class="status">[每日更新]</span></td>
+    </tr>
+  </table>
+  <details>
+    <summary><strong>使用说明</strong></summary>
+    <p>将 M3U 链接导入支持 IPTV 的播放器（如 VLC 或 IPTV 客户端），即可观看每日更新的流媒体内容。注意检查网络连接以确保流畅播放。</p>
+  </details>
+
+  <hr>
+
+  <h2 id="洛雪音乐源">🎵 洛雪音乐源</h2>
+  <p>网络收集的洛雪音乐源，丰富你的音乐体验。</p>
+  <details>
+    <summary><strong>🔍 展开音乐源</strong></summary>
+    <table>
+      <tr><th>音乐源</th><th>链接</th><th>操作</th></tr>
+      <tr>
+        <td>SixYin</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+      <tr>
+        <td>Huibq</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+      <tr>
+        <td>Flower</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+      <tr>
+        <td>LX</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+      <tr>
+        <td>ikun</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+      <tr>
+        <td>Grass</td>
+        <td><code>https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js</code></td>
+        <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js');alert('已复制！')">复制</button></td>
+      </tr>
+    </table>
+    <details>
+      <summary><strong>使用说明</strong></summary>
+      <p>将音乐源链接添加到洛雪音乐客户端的源设置中，即可访问丰富的音乐资源。不同源可能提供不同的曲库，建议逐一尝试。</p>
+    </details>
+  </details>
+
+  <hr>
+
+  <h2 id="github-代理">🌐 GitHub 代理</h2>
+  <p>为访问受限地区提供的 GitHub raw 链接代理。</p>
+  <table>
+    <tr><th>资源</th><th>链接</th><th>操作</th></tr>
+    <tr>
+      <td>代理地址</td>
+      <td><code>https://github.860411.xyz/</code></td>
+      <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://github.860411.xyz/');alert('已复制！')">复制</button></td>
+    </tr>
+    <tr>
+      <td>使用示例</td>
+      <td><code>https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt</code></td>
+      <td><button class="copy-btn" onclick="navigator.clipboard.writeText('https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt');alert('已复制！')">复制</button></td>
+    </tr>
+  </table>
+  <details>
+    <summary><strong>使用说明</strong></summary>
+    <p>在 GitHub raw 链接前添加代理地址，可绕过访问限制。确保链接格式正确，避免重复添加代理前缀。</p>
+  </details>
+
+</body>
+</html>
