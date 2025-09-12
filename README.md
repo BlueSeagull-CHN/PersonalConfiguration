@@ -16,9 +16,9 @@
 
 优化网络体验的 AdGuardHome 白名单规则。
 
-| **资源**       | **链接**                                                                 | **操作** |
-|----------------|--------------------------------------------------------------------------|----------|
-| 白名单规则     |  https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt  | [点击复制] |
+| **资源**       | **链接**                                                                 |
+|----------------|--------------------------------------------------------------------------|
+| 白名单规则     | `https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -31,9 +31,9 @@
 
 MoonTV 订阅配置文件，轻松启用流媒体服务。
 
-| **资源**       | **链接**                                                                 | **操作** |
-|----------------|--------------------------------------------------------------------------|----------|
-| 配置文件       |  https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true  | [点击复制] |
+| **资源**       | **链接**                                                                 |
+|----------------|--------------------------------------------------------------------------|
+| 配置文件       | `https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true` |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -46,9 +46,9 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 每日更新的 IPTV M3U 播放列表，支持流媒体播放。
 
-| **资源**       | **链接**                                                                 | **操作** |
-|----------------|--------------------------------------------------------------------------|----------|
-| M3U 播放列表   |  https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u  | [点击复制] [每日更新] |
+| **资源**       | **链接**                                                                 |
+|----------------|--------------------------------------------------------------------------|
+| M3U 播放列表   | `https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u` |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -64,14 +64,14 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 <details>
   <summary><strong>🔍 展开音乐源</strong></summary>
 
-  | **音乐源**     | **链接**                                                                 | **操作** |
-  |----------------|--------------------------------------------------------------------------|----------|
-  | SixYin        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js` | [点击复制] |
-  | Huibq         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js` | [点击复制] |
-  | Flower        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js` | [点击复制] |
-  | LX            | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js` | [点击复制] |
-  | ikun          | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js` | [点击复制] |
-  | Grass         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js` | [点击复制] |
+  | **音乐源**     | **链接**                                                                 |
+  |----------------|--------------------------------------------------------------------------|
+  | SixYin        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js` |
+  | Huibq         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js` |
+  | Flower        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js` |
+  | LX            | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js` |
+  | ikun          | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js` |
+  | Grass         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js` |
 
   <details>
     <summary><strong>使用说明</strong></summary>
@@ -85,10 +85,10 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 为访问受限地区提供的 GitHub raw 链接代理。
 
-| **资源**       | **链接**                                                                 | **操作** |
-|----------------|--------------------------------------------------------------------------|----------|
-| 代理地址       | `https://github.860411.xyz/`                                             | [点击复制] |
-| 使用示例       | `https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` | [点击复制] |
+| **资源**       | **链接**                                                                 |
+|----------------|--------------------------------------------------------------------------|
+| 代理地址       | `https://github.860411.xyz/`                                             |
+| 使用示例       | `https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` |
 
 <details>
   <summary><strong>使用说明</strong></summary>
