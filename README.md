@@ -4,11 +4,11 @@
 *精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。*
 
 ## 📋 目录
-- [AdGuardHome 规则](##adguardhome-规则)
-- [MoonTV 订阅](##moontv-订阅)
-- [IPTV M3U 订阅](##iptv-m3u-订阅)
-- [洛雪音乐源](##洛雪音乐源)
-- [GitHub 代理](##github-代理)
+- [AdGuardHome 规则](## 🛡️ AdGuardHome 规则)
+- [MoonTV 订阅](## 📺 MoonTV 订阅)
+- [IPTV M3U 订阅](## 📡 IPTV M3U 订阅)
+- [洛雪音乐源](## 🎵 洛雪音乐源)
+- [GitHub 代理](## 🌐 GitHub 代理)
 
 ***
 
