@@ -1,7 +1,7 @@
 # ✨ 私人使用配置
 
 <img src="https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/main/images/banner.webp" alt="私人使用配置 Banner" width="100%">
-*精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。*
+*精心整理的配置文件与资源集合，助力高效使用 AdGuardHome、MoonTV、IPTV、洛雪音乐源及 GitHub 代理。右键“原地址”复制链接即可。*
 
 ## 📋 目录
 - [AdGuardHome 规则](#%EF%B8%8F-adguardhome-规则)
@@ -18,7 +18,7 @@
 
 | **资源**       | **链接**                                                                 |
 |----------------|--------------------------------------------------------------------------|
-| 白名单规则     | `https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` |
+| 白名单规则     | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt) |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -31,9 +31,9 @@
 
 MoonTV 订阅配置文件，轻松启用流媒体服务。
 
-| **资源**       | **链接**                                                                 |
-|----------------|--------------------------------------------------------------------------|
-| 配置文件       | `https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true` |
+| **资源** | **链接** |
+|---|---|
+| 配置文件 | [原地址](https://58.haiou.qzz.io/?url=https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/MoonTV/config.json&pretty=true) |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -46,9 +46,9 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 每日更新的 IPTV M3U 播放列表，支持流媒体播放。
 
-| **资源**       | **链接**                                                                 |
+| **资源** | **链接** |
 |----------------|--------------------------------------------------------------------------|
-| M3U 播放列表   | `https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u` |
+| M3U 播放列表   | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/iptv-api/refs/heads/master/output/result.m3u) |
 
 <details>
   <summary><strong>使用说明</strong></summary>
@@ -66,12 +66,12 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
   | **音乐源**     | **链接**                                                                 |
   |----------------|--------------------------------------------------------------------------|
-  | SixYin        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js` |
-  | Huibq         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js` |
-  | Flower        | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js` |
-  | LX            | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js` |
-  | ikun          | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js` |
-  | Grass         | `https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js` |
+  | SixYin        | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js) |
+  | Huibq         | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js) |
+  | Flower        | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js) |
+  | LX            | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js) |
+  | ikun          | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js) |
+  | Grass         | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js) |
 
   <details>
     <summary><strong>使用说明</strong></summary>
@@ -85,10 +85,10 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
 为访问受限地区提供的 GitHub raw 链接代理。
 
-| **资源**       | **链接**                                                                 |
-|----------------|--------------------------------------------------------------------------|
-| 代理地址       | `https://github.860411.xyz/`                                             |
-| 使用示例       | `https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt` |
+| **资源**| **链接** |
+|---|----|
+| 代理地址       | https://github.860411.xyz/ |
+| 使用示例       | https://github.860411.xyz/https://raw.githubusercontent.com/BlueSeagull-CHN/PersonalConfiguration/refs/heads/main/AdGuardHome-rules/Whitelist.txt |
 
 <details>
   <summary><strong>使用说明</strong></summary>
