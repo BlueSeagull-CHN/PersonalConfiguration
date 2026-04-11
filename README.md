@@ -66,6 +66,7 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
 
   | **音乐源**     | **链接**                                                                 |
   |----------------|--------------------------------------------------------------------------|
+  | JHMS          | [原地址](https://api.music.lerd.dpdns.org/script.js) |
   | SixYin        | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/sixyin/latest.js) |
   | Huibq         | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/huibq/latest.js) |
   | Flower        | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/flower/latest.js) |
