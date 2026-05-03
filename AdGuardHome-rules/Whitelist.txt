@@ -1,4 +1,6 @@
+@@||zh.hplives.com^
 @@||hplives.com^
+@@||*.hplives.com^
 
 @@||topnewsfeeds.net^
 @@||nbryb.com^
