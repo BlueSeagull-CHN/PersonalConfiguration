@@ -1,6 +1,8 @@
 @@||zh.hplives.com^
 @@||hplives.com^
 @@||*.hplives.com^
+@@||snssdk.com^
+@@||ctobsnssdk.com^
 
 @@||topnewsfeeds.net^
 @@||nbryb.com^
