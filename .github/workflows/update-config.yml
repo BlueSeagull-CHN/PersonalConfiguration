@@ -3,10 +3,10 @@ name: 每日更新配置
 on:
   schedule:
     - cron: '0 0 * * *'   # 每天 UTC 0:00（北京时间 8:00）
-  workflow_dispatch:       # 支持手动触发
+  workflow_dispatch:
 
 permissions:
-  contents: write          # 授予写入权限
+  contents: write
 
 jobs:
   update-json:
@@ -27,16 +27,71 @@ jobs:
             "https://www.ziyuanzu.com/download/ziyuanzu-cms-interfaces.txt"
 
       - name: 转换格式并更新 config_Update.json
+        id: convert
         run: |
           python scripts/convert.py
+          # 将接口数量写入环境变量，供后续步骤使用
+          count=$(jq '.api_site | length' MoonTV/config_Update.json)
+          echo "count=$count" >> $GITHUB_OUTPUT
 
       - name: 提交并推送
+        id: push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          
           git add MoonTV/config_Update.json
-          git diff --staged --quiet || git commit -m "chore: 每日自动更新接口配置 [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "chore: 每日自动更新接口配置 [skip ci]"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # ---------- Telegram 通知（成功） ----------
+      - name: 发送成功通知到 Telegram
+        if: steps.push.outputs.changed == 'true'
+        run: |
+          COUNT="${{ steps.convert.outputs.count }}"
+          DATE="$(date '+%Y-%m-%d %H:%M:%S')"
+          MESSAGE="✅ 接口配置已更新
+          
+📁 文件：MoonTV/config_Update.json
+📊 接口数量：$COUNT
+🕐 更新时间：$DATE
+🔗 查看详情：https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE" \
+            -d parse_mode="Markdown"
+
+      - name: 发送无变更通知到 Telegram
+        if: steps.push.outputs.changed == 'false'
+        run: |
+          MESSAGE="ℹ️ 接口配置无变化（已是最新）
+          
+📁 文件：MoonTV/config_Update.json
+🕐 检查时间：$(date '+%Y-%m-%d %H:%M:%S')"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE" \
+            -d parse_mode="Markdown"
+
+      # ---------- Telegram 通知（失败） ----------
+      - name: 发送失败通知到 Telegram
+        if: failure()
+        run: |
+          MESSAGE="❌ 接口配置更新失败！
+          
+📁 仓库：${{ github.repository }}
+🕐 时间：$(date '+%Y-%m-%d %H:%M:%S')
+🔍 请检查 Actions 日志：https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE" \
+            -d parse_mode="Markdown"
