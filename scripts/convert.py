@@ -5,9 +5,10 @@ import concurrent.futures
 import time
 
 # ---------- 配置 ----------
-MAX_INTERFACES = 20      # 保留最快的接口数量
-TIMEOUT = 5              # 单个接口超时时间（秒）
-THREADS = 10             # 并发线程数
+KEEP_RATIO = 0.67          # 保留最快接口的比例（2/3）
+TIMEOUT = 5                # 单个接口超时时间（秒）
+THREADS = 10               # 并发线程数
+MIN_INTERFACES = 10        # 至少保留 10 个（防止比例太低）
 # -------------------------
 
 def test_speed(api_url):
@@ -76,10 +77,15 @@ for entry in entries:
 # 按速度排序（快的在前）
 valid_entries.sort(key=lambda x: x['speed'])
 
-# 取前 N 个最快的接口
-top_entries = valid_entries[:MAX_INTERFACES]
+# 计算保留数量（至少 MIN_INTERFACES，且不超过有效总数）
+max_interfaces = max(MIN_INTERFACES, int(len(valid_entries) * KEEP_RATIO))
+# 如果保留数量大于有效总数，则全部保留
+if max_interfaces > len(valid_entries):
+    max_interfaces = len(valid_entries)
 
-print(f"✅ 测速完成，有效接口：{len(valid_entries)} 个，已筛选出前 {len(top_entries)} 个最快的接口")
+top_entries = valid_entries[:max_interfaces]
+
+print(f"✅ 测速完成，有效接口：{len(valid_entries)} 个，保留 {len(top_entries)} 个（约 {int(KEEP_RATIO*100)}%）")
 
 # 构建最终 JSON
 config = {
