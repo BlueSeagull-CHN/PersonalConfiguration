@@ -30,7 +30,6 @@ jobs:
         id: convert
         run: |
           python scripts/convert.py
-          # 将接口数量写入环境变量，供后续步骤使用
           count=$(jq '.api_site | length' MoonTV/config_Update.json)
           echo "count=$count" >> $GITHUB_OUTPUT
 
@@ -50,48 +49,31 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      # ---------- Telegram 通知（成功） ----------
       - name: 发送成功通知到 Telegram
         if: steps.push.outputs.changed == 'true'
         run: |
           COUNT="${{ steps.convert.outputs.count }}"
           DATE="$(date '+%Y-%m-%d %H:%M:%S')"
-          MESSAGE="✅ 接口配置已更新
-          
-📁 文件：MoonTV/config_Update.json
-📊 接口数量：$COUNT
-🕐 更新时间：$DATE
-🔗 查看详情：https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          MESSAGE="✅ 接口配置已更新%0A%0A📁 文件：MoonTV/config_Update.json%0A📊 接口数量：$COUNT%0A🕐 更新时间：$DATE%0A🔗 查看详情：https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
           
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="$MESSAGE" \
-            -d parse_mode="Markdown"
+            -d text="$MESSAGE"
 
       - name: 发送无变更通知到 Telegram
         if: steps.push.outputs.changed == 'false'
         run: |
-          MESSAGE="ℹ️ 接口配置无变化（已是最新）
-          
-📁 文件：MoonTV/config_Update.json
-🕐 检查时间：$(date '+%Y-%m-%d %H:%M:%S')"
+          MESSAGE="ℹ️ 接口配置无变化（已是最新）%0A%0A📁 文件：MoonTV/config_Update.json%0A🕐 检查时间：$(date '+%Y-%m-%d %H:%M:%S')"
           
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="$MESSAGE" \
-            -d parse_mode="Markdown"
+            -d text="$MESSAGE"
 
-      # ---------- Telegram 通知（失败） ----------
       - name: 发送失败通知到 Telegram
         if: failure()
         run: |
-          MESSAGE="❌ 接口配置更新失败！
-          
-📁 仓库：${{ github.repository }}
-🕐 时间：$(date '+%Y-%m-%d %H:%M:%S')
-🔍 请检查 Actions 日志：https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MESSAGE="❌ 接口配置更新失败！%0A%0A📁 仓库：${{ github.repository }}%0A🕐 时间：$(date '+%Y-%m-%d %H:%M:%S')%0A🔍 请检查 Actions 日志：https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="$MESSAGE" \
-            -d parse_mode="Markdown"
+            -d text="$MESSAGE"
