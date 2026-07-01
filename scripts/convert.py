@@ -1,105 +1,80 @@
-import json
-import re
-import requests
-import concurrent.futures
-import time
+name: 每日更新配置
 
-# ---------- 配置 ----------
-MAX_INTERFACES = 20      # 保留最快的接口数量
-TIMEOUT = 5              # 单个接口超时时间（秒）
-THREADS = 10             # 并发线程数
-# -------------------------
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
-def test_speed(api_url):
-    """测试单个接口的响应速度，返回 (api_url, speed_ms, success)"""
-    try:
-        start = time.time()
-        # 用 GET 请求测试，只获取头部信息，节省流量
-        resp = requests.get(api_url, timeout=TIMEOUT, stream=True)
-        # 读取少量数据以确保连接建立
-        resp.iter_content(1024)
-        elapsed = (time.time() - start) * 1000  # 转换为毫秒
-        if resp.status_code == 200:
-            return (api_url, elapsed, True)
-        else:
-            return (api_url, None, False)
-    except:
-        return (api_url, None, False)
+permissions:
+  contents: write
 
-# 读取源文件
-with open('source.txt', 'r', encoding='utf-8') as f:
-    lines = f.readlines()
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
 
-# 解析所有接口
-entries = []
-for line in lines:
-    line = line.strip()
-    if not line or line.startswith('#'):
-        continue
-    parts = line.split('|')
-    if len(parts) >= 2:
-        name = parts[0].strip()
-        api_url = parts[1].strip()
-        match = re.match(r'(https?://[^/]+)', api_url)
-        detail = match.group(1) if match else api_url
-        entries.append({
-            'name': name,
-            'api': api_url,
-            'detail': detail,
-            'speed': None  # 占位，稍后填充
-        })
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
 
-print(f"📡 解析到 {len(entries)} 个接口，开始测速...")
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-# 提取所有 API URL 用于测速
-api_urls = [e['api'] for e in entries]
+      - name: 下载接口列表
+        run: |
+          curl -s -o source.txt \
+            "https://www.ziyuanzu.com/download/ziyuanzu-cms-interfaces.txt"
 
-# 并发测速
-speed_results = {}
-with concurrent.futures.ThreadPoolExecutor(max_workers=THREADS) as executor:
-    future_to_url = {executor.submit(test_speed, url): url for url in api_urls}
-    for future in concurrent.futures.as_completed(future_to_url):
-        url, speed, success = future.result()
-        if success:
-            speed_results[url] = speed
-            print(f"  ✅ {url[:50]}... {speed:.0f}ms")
-        else:
-            speed_results[url] = None
-            print(f"  ❌ {url[:50]}... 超时或失败")
+      - name: 转换格式并更新 config_Update.json（含测速筛选）
+        id: convert
+        run: |
+          pip install requests
+          python scripts/convert.py
+          count=$(jq '.api_site | length' MoonTV/config_Update.json)
+          echo "count=$count" >> $GITHUB_OUTPUT
 
-# 按速度排序，过滤掉失败的接口
-valid_entries = []
-for entry in entries:
-    speed = speed_results.get(entry['api'])
-    if speed is not None:
-        entry['speed'] = round(speed, 1)
-        valid_entries.append(entry)
+      - name: 提交并推送
+        id: push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git add MoonTV/config_Update.json
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "chore: 每日自动更新接口配置 [skip ci]"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
-# 按速度排序（快的在前）
-valid_entries.sort(key=lambda x: x['speed'])
+      - name: 发送成功通知到 Telegram
+        if: steps.push.outputs.changed == 'true'
+        run: |
+          COUNT="${{ steps.convert.outputs.count }}"
+          DATE="$(date '+%Y-%m-%d %H:%M:%S')"
+          MESSAGE="✅ 接口配置已更新（已筛选最快接口）%0A%0A📁 文件：MoonTV/config_Update.json%0A📊 接口数量：$COUNT%0A🕐 更新时间：$DATE%0A🔗 查看详情：https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE"
 
-# 取前 N 个最快的接口
-top_entries = valid_entries[:MAX_INTERFACES]
+      - name: 发送无变更通知到 Telegram
+        if: steps.push.outputs.changed == 'false'
+        run: |
+          MESSAGE="ℹ️ 接口配置无变化（已是最新）%0A%0A📁 文件：MoonTV/config_Update.json%0A🕐 检查时间：$(date '+%Y-%m-%d %H:%M:%S')"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE"
 
-print(f"✅ 测速完成，有效接口：{len(valid_entries)} 个，已筛选出前 {len(top_entries)} 个最快的接口")
-
-# 构建最终 JSON
-config = {
-    "cache_time": 9200,
-    "api_site": {}
-}
-
-for idx, entry in enumerate(top_entries, start=1):
-    # 移除 speed 字段，只保留 name, api, detail
-    clean_entry = {
-        'name': entry['name'],
-        'api': entry['api'],
-        'detail': entry['detail']
-    }
-    config['api_site'][f'api_{idx}'] = clean_entry
-
-# 写入目标文件
-with open('MoonTV/config_Update.json', 'w', encoding='utf-8') as f:
-    json.dump(config, f, ensure_ascii=False, indent=2)
-
-print(f"📝 已写入 MoonTV/config_Update.json，包含 {len(top_entries)} 个接口")
+      - name: 发送失败通知到 Telegram
+        if: failure()
+        run: |
+          MESSAGE="❌ 接口配置更新失败！%0A%0A📁 仓库：${{ github.repository }}%0A🕐 时间：$(date '+%Y-%m-%d %H:%M:%S')%0A🔍 请检查 Actions 日志：https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE"
