@@ -1,0 +1,43 @@
+name: 每日更新配置
+
+on:
+  schedule:
+    # 每天北京时间 8:00 运行（UTC 0:00）
+    - cron: '0 0 * * *'
+  # 支持手动触发，方便测试
+  workflow_dispatch:
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出仓库
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      # 2. 设置 Python（用于转换脚本）
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. 下载源数据
+      - name: 下载接口列表
+        run: |
+          curl -s -o source.txt \
+            "https://www.ziyuanzu.com/download/ziyuanzu-cms-interfaces.txt"
+
+      # 4. 运行转换脚本
+      - name: 转换格式并更新 config_Update.json
+        run: |
+          python scripts/convert.py
+
+      # 5. 提交并推送更改
+      - name: 提交并推送
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add MoonTV/config.json
+          git diff --staged --quiet || git commit -m "chore: 每日自动更新接口配置 [skip ci]"
+          git push
