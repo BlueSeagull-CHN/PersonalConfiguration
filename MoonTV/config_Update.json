@@ -2,39 +2,39 @@
   "cache_time": 9200,
   "api_site": {
     "api_1": {
-      "name": "丝系资源站",
-      "api": "https://siwazyw.tv/api.php/provide/vod/",
-      "detail": "https://siwazyw.tv"
-    },
-    "api_2": {
       "name": "JKUN资源站",
       "api": "https://jkunzyapi.com/api.php/provide/vod",
       "detail": "https://jkunzyapi.com"
     },
-    "api_3": {
-      "name": "X色仓库资源",
-      "api": "https://hsckzy888.com/api.php/provide/vod",
-      "detail": "https://hsckzy888.com"
-    },
-    "api_4": {
+    "api_2": {
       "name": "越南资源站",
       "api": "https://api.vnzyz.com/api.php/provide/vod/",
       "detail": "https://api.vnzyz.com"
     },
-    "api_5": {
-      "name": "最大资源站",
-      "api": "http://zuidazy.me/api.php/provide/vod/",
-      "detail": "http://zuidazy.me"
+    "api_3": {
+      "name": "155资源站",
+      "api": "https://155api.com/api.php/provide/vod",
+      "detail": "https://155api.com"
     },
-    "api_6": {
-      "name": "无尽资源站",
-      "api": "https://api.wujinapi.me/api.php/provide/vod/",
-      "detail": "https://api.wujinapi.me"
-    },
-    "api_7": {
+    "api_4": {
       "name": "大地资源站",
       "api": "https://dadiapi.com/api.php",
       "detail": "https://dadiapi.com"
+    },
+    "api_5": {
+      "name": "暴风资源站",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
+      "detail": "https://bfzyapi.com"
+    },
+    "api_6": {
+      "name": "色猫资源站",
+      "api": "https://caiji.semaozy.net/inc/api.php",
+      "detail": "https://caiji.semaozy.net"
+    },
+    "api_7": {
+      "name": "无尽资源站",
+      "api": "https://api.wujinapi.me/api.php/provide/vod/",
+      "detail": "https://api.wujinapi.me"
     },
     "api_8": {
       "name": "玉兔资源站",
@@ -42,64 +42,64 @@
       "detail": "https://apiyutu.com"
     },
     "api_9": {
-      "name": "搜A-V资源站",
-      "api": "https://api.souavzyw.net/api.php/provide/vod",
-      "detail": "https://api.souavzyw.net"
-    },
-    "api_10": {
-      "name": "索尼采集站",
-      "api": "https://suonizy.net/api.php/provide/vod/",
-      "detail": "https://suonizy.net"
-    },
-    "api_11": {
-      "name": "色猫资源站",
-      "api": "https://caiji.semaozy.net/inc/api.php",
-      "detail": "https://caiji.semaozy.net"
-    },
-    "api_12": {
-      "name": "暴风资源站",
-      "api": "https://bfzyapi.com/api.php/provide/vod/",
-      "detail": "https://bfzyapi.com"
-    },
-    "api_13": {
-      "name": "滴滴资源站",
-      "api": "https://api.ddapi.cc/api.php/provide/vod/",
-      "detail": "https://api.ddapi.cc"
-    },
-    "api_14": {
-      "name": "光速资源站",
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-      "detail": "https://api.guangsuapi.com"
-    },
-    "api_15": {
-      "name": "乐播资源站",
-      "api": "https://lbapi9.com/api.php/provide/vod/",
-      "detail": "https://lbapi9.com"
-    },
-    "api_16": {
-      "name": "豆豆资源站",
-      "api": "https://api.douapi.cc/api.php/provide/vod",
-      "detail": "https://api.douapi.cc"
-    },
-    "api_17": {
       "name": "老色X资源站",
       "api": "https://apilsbzy1.com/api.php/provide/vod/",
       "detail": "https://apilsbzy1.com"
     },
-    "api_18": {
+    "api_10": {
+      "name": "乐播资源站",
+      "api": "https://lbapi9.com/api.php/provide/vod/",
+      "detail": "https://lbapi9.com"
+    },
+    "api_11": {
+      "name": "最大资源站",
+      "api": "http://zuidazy.me/api.php/provide/vod/",
+      "detail": "http://zuidazy.me"
+    },
+    "api_12": {
+      "name": "小鸡资源站",
+      "api": "https://api.xiaojizy.live/provide/vod/",
+      "detail": "https://api.xiaojizy.live"
+    },
+    "api_13": {
       "name": "辣椒资源站",
       "api": "https://apilj.com/api.php/provide/vod/",
       "detail": "https://apilj.com"
     },
-    "api_19": {
+    "api_14": {
+      "name": "细胞网资源站",
+      "api": "https://www.xxibaozyw.com/api.php/provide/vod",
+      "detail": "https://www.xxibaozyw.com"
+    },
+    "api_15": {
+      "name": "光速资源站",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "detail": "https://api.guangsuapi.com"
+    },
+    "api_16": {
+      "name": "牛牛资源",
+      "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+      "detail": "https://api.niuniuzy.me"
+    },
+    "api_17": {
       "name": "香系源资源站",
       "api": "https://www.gdlsp.com/api/json.php",
       "detail": "https://www.gdlsp.com"
     },
+    "api_18": {
+      "name": "X色A-V资源站",
+      "api": "https://www.pgxdy.com/api/json.php",
+      "detail": "https://www.pgxdy.com"
+    },
+    "api_19": {
+      "name": "搜A-V资源站",
+      "api": "https://api.souavzyw.net/api.php/provide/vod",
+      "detail": "https://api.souavzyw.net"
+    },
     "api_20": {
-      "name": "鸭鸭资源站",
-      "api": "https://cj.yayazy.net/api.php/provide/vod/",
-      "detail": "https://cj.yayazy.net"
+      "name": "天涯影视资源站",
+      "api": "https://tyyszyapi.com/api.php/provide/vod/",
+      "detail": "https://tyyszyapi.com"
     },
     "api_21": {
       "name": "金鹰资源站",
@@ -107,14 +107,14 @@
       "detail": "https://jyzyapi.com"
     },
     "api_22": {
-      "name": "X色A-V资源站",
-      "api": "https://www.pgxdy.com/api/json.php",
-      "detail": "https://www.pgxdy.com"
+      "name": "索尼采集站",
+      "api": "https://suonizy.net/api.php/provide/vod/",
+      "detail": "https://suonizy.net"
     },
     "api_23": {
-      "name": "细胞网资源站",
-      "api": "https://www.xxibaozyw.com/api.php/provide/vod",
-      "detail": "https://www.xxibaozyw.com"
+      "name": "X色仓库资源",
+      "api": "https://hsckzy888.com/api.php/provide/vod",
+      "detail": "https://hsckzy888.com"
     },
     "api_24": {
       "name": "美少女资源站",
@@ -122,74 +122,64 @@
       "detail": "https://www.msnii.com"
     },
     "api_25": {
+      "name": "豆豆资源站",
+      "api": "https://api.douapi.cc/api.php/provide/vod",
+      "detail": "https://api.douapi.cc"
+    },
+    "api_26": {
+      "name": "滴滴资源站",
+      "api": "https://api.ddapi.cc/api.php/provide/vod/",
+      "detail": "https://api.ddapi.cc"
+    },
+    "api_27": {
+      "name": "鸭鸭资源站",
+      "api": "https://cj.yayazy.net/api.php/provide/vod/",
+      "detail": "https://cj.yayazy.net"
+    },
+    "api_28": {
       "name": "清水源资源站",
       "api": "https://www.xrbsp.com/api/json.php",
       "detail": "https://www.xrbsp.com"
     },
-    "api_26": {
-      "name": "大X子资源站",
-      "api": "https://apidanaizi.com/api.php/provide/vod/",
-      "detail": "https://apidanaizi.com"
-    },
-    "api_27": {
-      "name": "天涯影视资源站",
-      "api": "https://tyyszyapi.com/api.php/provide/vod/",
-      "detail": "https://tyyszyapi.com"
-    },
-    "api_28": {
-      "name": "牛牛资源",
-      "api": "https://api.niuniuzy.me/api.php/provide/vod/",
-      "detail": "https://api.niuniuzy.me"
-    },
     "api_29": {
-      "name": "白嫖资源站",
-      "api": "https://www.kxgav.com/api/json.php",
-      "detail": "https://www.kxgav.com"
+      "name": "麻豆资源站",
+      "api": "https://91md.me/api.php/provide/vod/",
+      "detail": "https://91md.me"
     },
     "api_30": {
-      "name": "香蕉资源站",
-      "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/",
-      "detail": "https://www.xiangjiaozyw.com"
-    },
-    "api_31": {
       "name": "红牛资源站",
       "api": "http://hongniuzy2.com/api.php/provide/vod/",
       "detail": "http://hongniuzy2.com"
     },
+    "api_31": {
+      "name": "大X子资源站",
+      "api": "https://apidanaizi.com/api.php/provide/vod/",
+      "detail": "https://apidanaizi.com"
+    },
     "api_32": {
-      "name": "爱坤资源站",
-      "api": "https://ikunzyapi.com/api.php/provide/vod/",
-      "detail": "https://ikunzyapi.com"
-    },
-    "api_33": {
-      "name": "番号资源站",
-      "api": "http://fhapi9.com/api.php/provide/vod/",
-      "detail": "http://fhapi9.com"
-    },
-    "api_34": {
-      "name": "樱花资源站",
-      "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
-      "detail": "https://m3u8.apiyhzy.com"
-    },
-    "api_35": {
-      "name": "小鸡资源站",
-      "api": "https://api.xiaojizy.live/provide/vod/",
-      "detail": "https://api.xiaojizy.live"
-    },
-    "api_36": {
-      "name": "新极品资源站",
-      "api": "https://jipinvip1.com/api.php/provide/vod/",
-      "detail": "https://jipinvip1.com"
-    },
-    "api_37": {
       "name": "飘零影院资源站",
       "api": "https://p2100.net/api.php/provide/vod/",
       "detail": "https://p2100.net"
     },
-    "api_38": {
-      "name": "155资源站",
-      "api": "https://155api.com/api.php/provide/vod",
-      "detail": "https://155api.com"
+    "api_33": {
+      "name": "爱坤资源站",
+      "api": "https://ikunzyapi.com/api.php/provide/vod/",
+      "detail": "https://ikunzyapi.com"
+    },
+    "api_34": {
+      "name": "香蕉资源站",
+      "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/",
+      "detail": "https://www.xiangjiaozyw.com"
+    },
+    "api_35": {
+      "name": "樱花资源站",
+      "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
+      "detail": "https://m3u8.apiyhzy.com"
+    },
+    "api_36": {
+      "name": "番号资源站",
+      "api": "http://fhapi9.com/api.php/provide/vod/",
+      "detail": "http://fhapi9.com"
     }
   }
 }
