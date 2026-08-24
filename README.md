@@ -73,6 +73,7 @@ MoonTV 订阅配置文件，轻松启用流媒体服务。
   | LX            | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/lx/latest.js) |
   | ikun          | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/ikun/latest.js) |
   | Grass         | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/main/grass/latest.js) |
+  | 全豆要         | [原地址](https://raw.githubusercontent.com/BlueSeagull-CHN/lx-music-source/refs/heads/main/qdy/latest.js) |
 
   <details>
     <summary><strong>使用说明</strong></summary>
