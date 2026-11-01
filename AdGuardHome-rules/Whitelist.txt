@@ -125,3 +125,11 @@
 @@||p3-passport.byteacctimg.com^$important
 @@||tsyndicate.com^$important
 @@||www.000111.best^$important
+@@||sh996sdk.cn-hangzhou.log.aliyuncs.com
+@@||ad-api.996hezi.com
+@@||applog.zijieapi.com
+@@||vcs.zijieapi.com
+@@||log.zijieapi.com
+@@||sdk.e.qq.com
+@@||statistic.live.126.net
+@@||sd-gl.comfylink.com
